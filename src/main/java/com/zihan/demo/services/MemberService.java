@@ -1,7 +1,9 @@
 package com.zihan.demo.services;
 
-import com.zihan.demo.model.Member;
-import org.springframework.boot.json.GsonJsonParser;
+import com.zihan.demo.model.User;
+import com.zihan.demo.response.Resp;
+import com.zihan.demo.utils.JsonUtil;
+import com.zihan.demo.utils.RespUtil;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,16 +13,23 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Service
 public class MemberService {
-    public Object addMember(HttpServletRequest request) {
-        request.
-        Member member = (Member)parseJson(json);
-        return ;
+    public Resp addMember(HttpServletRequest request) {
+        User member = (User) JsonUtil.parseJson(json);
+        Resp<User> test = new Resp<>();
+        test.setData(member);
+
+        return RespUtil.ok(test);
     }
 
-    private Object parseJson(String json) {
-        GsonBuilder gson = new GsonJsonParser();
-        return gson.parseList(json);
+    public Resp getMember() {
+
     }
+
+    public Resp modifyMember() {
+        return RespUtil.ok();
+    }
+
+
 
 
 }
