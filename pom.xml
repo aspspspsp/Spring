@@ -54,6 +54,24 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
+		<!-- 登入相關 start -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>4.0.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>4.0.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>4.0.3.RELEASE</version>
+		</dependency>
+		<!-- 登入相關 end -->
+
 		<!-- 資料庫相關 start -->
 		<!-- mybatis -->
 		<dependency>

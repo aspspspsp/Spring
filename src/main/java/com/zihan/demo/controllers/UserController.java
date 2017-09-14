@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by zihanxu on 2017/8/18.
  */
 @RestController
-@RequestMapping("member")
-public class MemberController {
+@RequestMapping("user")
+public class UserController {
     private final Logger logger;
-    @RequestMapping("addMember")
-    public void addMember() {
+    @RequestMapping("addUser")
+    public void addUser() {
 
     }
 
 
-    public void setMember() {
+    public void setUser() {
 
     }
 }

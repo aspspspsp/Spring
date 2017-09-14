@@ -1,6 +1,6 @@
 package com.zihan.demo.services;
 
-import com.zihan.demo.dao.UserDAO;
+import com.zihan.demo.dao.VideoDAO;
 import com.zihan.demo.model.User;
 import com.zihan.demo.response.Resp;
 import com.zihan.demo.utils.JsonUtil;
@@ -11,15 +11,15 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by zihanxu on 2017/8/18.
+ * Created by zihanxu on 2017/9/14.
  */
 @Service
-public class UserService {
+public class VideoService {
 
     @Autowired
-    private UserDAO userDAO;
+    private VideoDAO videoDAO;
 
-    public Resp addUser(HttpServletRequest request) {
+    public Resp addVideo(HttpServletRequest request) {
         User user = (User) JsonUtil.parseJson(json);
         Resp<User> test = new Resp<>();
         test.setData(user);
@@ -27,11 +27,11 @@ public class UserService {
         return RespUtil.ok(test);
     }
 
-    public Resp getUser() {
+    public Resp getVideo() {
         return RespUtil.ok();
     }
 
-    public Resp modifyUser() {
+    public Resp modifyVideo() {
         return RespUtil.ok();
     }
 }
