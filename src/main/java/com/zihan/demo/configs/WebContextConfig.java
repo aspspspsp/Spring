@@ -20,8 +20,8 @@ import java.sql.Connection;
  * Created by zihanxu on 2017/9/13.
  */
 @Configuration
-@MapperScan(basePackageClasses = "com.zihan.demo.model")
-@ComponentScan(basePackageClasses = "com.zihan.demo.model")
+//@MapperScan(basePackageClasses = "com.zihan.demo.model")
+//@ComponentScan(basePackageClasses = "com.zihan.demo.model")
 public class WebContextConfig {
     @Bean
     public DataSource getDataSoruce() {

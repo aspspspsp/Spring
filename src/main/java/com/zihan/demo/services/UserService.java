@@ -1,13 +1,15 @@
 package com.zihan.demo.services;
 
-import com.zihan.demo.dao.UserDAO;
 import com.zihan.demo.model.User;
 import com.zihan.demo.response.Resp;
+import com.zihan.demo.utils.CodeEnum;
 import com.zihan.demo.utils.JsonUtil;
 import com.zihan.demo.utils.RespUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.rmi.CORBA.Util;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -16,22 +18,31 @@ import javax.servlet.http.HttpServletRequest;
 @Service
 public class UserService {
 
-    @Autowired
-    private UserDAO userDAO;
+//    @Autowired
+//    private UserDAO userDAO;
 
-    public Resp addUser(HttpServletRequest request) {
-        User user = (User) JsonUtil.parseJson(json);
+    public Resp addUser(@RequestBody User user) {
         Resp<User> test = new Resp<>();
         test.setData(user);
 
         return RespUtil.ok(test);
     }
 
-    public Resp getUser() {
-        return RespUtil.ok();
+    /**
+     * 取得使用者
+     * @param uid
+     * @return
+     */
+    public Resp getUser(long uid) {
+        if(uid < 0) {
+            return RespUtil.fail(CodeEnum.OPERATE_ERROR.getCode(), "參數錯誤");
+        }
+
+        return RespUtil.ok("成功惹");
     }
 
     public Resp modifyUser() {
-        return RespUtil.ok();
+//        return RespUtil.ok();
+        return null;
     }
 }
