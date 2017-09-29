@@ -1,5 +1,6 @@
 package com.zihan.demo.model;
 
+import com.zihan.demo.constant.VideoCategoryEnum;
 import lombok.Data;
 
 /**
@@ -8,5 +9,5 @@ import lombok.Data;
 @Data
 public class Video {
     private final long id;
-
+    private final VideoCategoryEnum category;
 }

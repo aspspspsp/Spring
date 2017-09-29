@@ -1,5 +1,6 @@
 package com.zihan.demo.services;
 
+import com.zihan.demo.dao.UserDAO;
 import com.zihan.demo.model.User;
 import com.zihan.demo.response.Resp;
 import com.zihan.demo.utils.CodeEnum;
@@ -18,8 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 @Service
 public class UserService {
 
-//    @Autowired
-//    private UserDAO userDAO;
+    @Autowired
+    private UserDAO userDAO;
 
     public Resp addUser(@RequestBody User user) {
         Resp<User> test = new Resp<>();

@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by zihanxu on 2017/8/18.
  */
-//@Repository
-//public interface UserDAO {
-//    @Select("")
-//    User getOneUser();
-//}
+@Repository
+public interface UserDAO {
+    @Select("")
+    public User getUserById(Long userId);
+
+}

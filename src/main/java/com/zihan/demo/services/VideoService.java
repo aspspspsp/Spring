@@ -1,7 +1,9 @@
 package com.zihan.demo.services;
 
 //import com.zihan.demo.dao.VideoDAO;
+import com.zihan.demo.dao.VideoDAO;
 import com.zihan.demo.model.User;
+import com.zihan.demo.model.Video;
 import com.zihan.demo.response.Resp;
 import com.zihan.demo.utils.CodeEnum;
 import com.zihan.demo.utils.JsonUtil;
@@ -16,17 +18,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Service
 public class VideoService {
-
-//    @Autowired
-//    private VideoDAO videoDAO;
+    @Autowired
+    private VideoDAO videoDAO;
 
     public Resp addVideo(HttpServletRequest request) {
-//        User user = (User) JsonUtil.parseJson(json);
-//        Resp<User> test = new Resp<>();
-//        test.setData(user);
-//
-//        return RespUtil.ok(test);
-        return null;
+        Resp<Video> test = new Resp<>();
+        return RespUtil.ok(test);
     }
 
     public Resp getVideo(long videoId) {
