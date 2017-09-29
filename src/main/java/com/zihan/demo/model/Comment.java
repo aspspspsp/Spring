@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 public class Comment {
     private final long id;
-    private final long userId;
+    private final long uid;
     private final String comment;
     private final Date date;
 }

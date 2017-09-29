@@ -8,5 +8,6 @@ import java.util.List;
  * Created by zihanxu on 2017/9/20.
  */
 public interface UserMapper {
-    List<User> selectUserByUid(long uid);
+    User selectUserByUid(long uid);
+    User selectUserByUsername(String username);
 }

@@ -37,7 +37,7 @@ public class CommentService {
     }
 
     public Resp<Comment> getCommentsByVideoId(Long videoId) {
-
+        return null;
     }
 
     public Resp<Comment> getCommentsByUserId(Long userId) {
@@ -53,5 +53,6 @@ public class CommentService {
         if(comments == null || comments.size() == 0)
             return RespUtil.fail(CodeEnum.DATA_NULL.getCode(), "在該使用者");
 
+        return resp;
     }
 }
